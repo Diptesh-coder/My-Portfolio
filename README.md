@@ -88,13 +88,14 @@ My-Portfolio/
 
 ---
 
-🎯 Future Improvements
-Add blog section
-Improve 3D interactivity
-Add multilingual support
-Integrate analytics
-More certifications are uploading soon
-Introduction section getting improved
+## 🎯 Future Improvements:
+a) Adding blog section;
+b) Improving 3D interactivity;
+c) Adding multilingual support;
+d)Integrating analytics;
+e) More certifications are uploading soon;
+f) Introduction section getting improved;
+g) Chatbots will be getting deployed soon.
 
 ---
 
