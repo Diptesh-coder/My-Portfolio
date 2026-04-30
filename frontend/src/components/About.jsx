@@ -153,8 +153,8 @@ export default function About() {
                   certifications
                 </div>
                 <ul className="mt-4 space-y-3">
-                  {certifications.map((c, i) => (
-                    <li key={i} className="flex items-start gap-3">
+                  {certifications.map((c) => (
+                    <li key={c.id} className="flex items-start gap-3">
                       <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gradient-to-r from-cyan-300 to-violet-400 shrink-0" />
                       <div>
                         <div className="text-slate-100 text-sm">{c.name}</div>

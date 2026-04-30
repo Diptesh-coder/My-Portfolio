@@ -236,11 +236,12 @@ export const experience = [
 
 export const certifications = [
   {
+    id: "cert-deloitte",
     name: "Deloitte Australia \u2014 Data Analytics Job Simulation",
     issuer: "Forage",
   },
-  { name: "AI Engineer Certification", issuer: "Professional" },
-  { name: "Python \u2014 3hr Workshop Certificate", issuer: "Workshop" },
+  { id: "cert-ai-eng", name: "AI Engineer Certification", issuer: "Professional" },
+  { id: "cert-py-workshop", name: "Python \u2014 3hr Workshop Certificate", issuer: "Workshop" },
 ];
 
 export const socials = [
