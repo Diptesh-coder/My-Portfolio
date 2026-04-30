@@ -41,6 +41,29 @@ export default function Hero() {
             available for opportunities
           </motion.div>
 
+          <motion.div variants={item} className="mt-6 flex items-center gap-4">
+            <div className="relative">
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-cyan-400/60 to-violet-500/60 blur-md opacity-80" />
+              <div className="relative h-14 w-14 rounded-full overflow-hidden border border-white/15 bg-slate-900">
+                <img
+                  src="/images/diptesh.png"
+                  alt="Diptesh Maji"
+                  className="h-full w-full object-cover object-top"
+                  loading="eager"
+                />
+              </div>
+              <span className="absolute -bottom-0.5 -right-0.5 h-3.5 w-3.5 rounded-full bg-cyan-300 border-2 border-[#05060b] shadow-[0_0_10px_#22d3ee]" />
+            </div>
+            <div className="leading-tight">
+              <div className="mono text-[11px] uppercase tracking-[0.2em] text-slate-400">
+                hello, world.
+              </div>
+              <div className="mono text-[11px] uppercase tracking-[0.18em] text-cyan-300">
+                building from asansol, in
+              </div>
+            </div>
+          </motion.div>
+
           <motion.h1
             variants={item}
             className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.02] tracking-tight"

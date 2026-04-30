@@ -63,30 +63,54 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7 }}
-            className="lg:col-span-7 glass-strong rounded-2xl p-8 shine-border relative"
+            className="lg:col-span-5 lg:sticky lg:top-24 self-start"
           >
-            <p className="text-slate-200 text-lg leading-relaxed">
-              {personalInfo.bio}
-            </p>
-            <p className="mt-5 text-slate-400 leading-relaxed">
-              I care deeply about the seams where models meet products — clean
-              contracts, thoughtful UX, tight feedback loops. Whether I’m building a
-              permission-safe RAG platform or a multi-agent research system, the goal is the
-              same: make the intelligent part feel obvious, reliable and fast.
-            </p>
+            <div className="relative rounded-3xl glass-strong shine-border p-3">
+              {/* glow halos */}
+              <div className="pointer-events-none absolute -top-6 -left-6 h-40 w-40 rounded-full bg-cyan-400/20 blur-3xl" />
+              <div className="pointer-events-none absolute -bottom-8 -right-6 h-44 w-44 rounded-full bg-violet-500/25 blur-3xl" />
 
-            <div className="mt-8 grid sm:grid-cols-2 gap-3">
-              {aboutHighlights.map((h) => (
-                <div
-                  key={h.label}
-                  className="rounded-xl border border-white/5 bg-white/[0.02] p-4"
-                >
-                  <div className="mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
-                    {h.label}
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-b from-slate-800/40 to-slate-950/60">
+                <img
+                  src="/images/diptesh.png"
+                  alt="Diptesh Maji"
+                  className="w-full h-auto object-cover aspect-[4/5] grayscale-[0.15] contrast-[1.05]"
+                  loading="lazy"
+                />
+                {/* gradient scrim for readability */}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#05060b] via-transparent to-transparent" />
+                {/* corner ticks */}
+                <div className="absolute top-2 left-2 h-3 w-3 border-t border-l border-cyan-300/60" />
+                <div className="absolute top-2 right-2 h-3 w-3 border-t border-r border-cyan-300/60" />
+                <div className="absolute bottom-2 left-2 h-3 w-3 border-b border-l border-violet-400/60" />
+                <div className="absolute bottom-2 right-2 h-3 w-3 border-b border-r border-violet-400/60" />
+
+                {/* Identity strip */}
+                <div className="absolute left-3 right-3 bottom-3 flex items-end justify-between">
+                  <div>
+                    <div className="mono text-[10px] uppercase tracking-[0.22em] text-cyan-300">
+                      / engineer
+                    </div>
+                    <div className="mt-1 font-display text-xl font-semibold text-slate-50">
+                      {personalInfo.name}
+                    </div>
+                    <div className="mono text-[11px] text-slate-400">
+                      {personalInfo.title} · {personalInfo.subtitle}
+                    </div>
                   </div>
-                  <div className="mt-1 text-slate-100 font-medium">{h.value}</div>
+                  <div className="hidden sm:flex flex-col items-end gap-1">
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan-300/40 bg-cyan-300/10 px-2 py-0.5 mono text-[10px] uppercase tracking-[0.16em] text-cyan-200">
+                      <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-cyan-300">
+                        <span className="absolute inset-0 rounded-full bg-cyan-300 animate-ping" />
+                      </span>
+                      online
+                    </span>
+                    <span className="mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
+                      asansol · in
+                    </span>
+                  </div>
                 </div>
-              ))}
+              </div>
             </div>
           </motion.div>
 
@@ -95,35 +119,63 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="lg:col-span-5 space-y-3"
+            className="lg:col-span-7 space-y-3"
           >
-            <div className="glass rounded-2xl p-6">
-              <div className="mono text-[10px] uppercase tracking-[0.2em] text-cyan-300">
-                certifications
-              </div>
-              <ul className="mt-4 space-y-3">
-                {certifications.map((c, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gradient-to-r from-cyan-300 to-violet-400 shrink-0" />
-                    <div>
-                      <div className="text-slate-100">{c.name}</div>
-                      <div className="mono text-[11px] text-slate-500">{c.issuer}</div>
+            <div className="glass-strong rounded-2xl p-8 shine-border relative">
+              <p className="text-slate-200 text-lg leading-relaxed">
+                {personalInfo.bio}
+              </p>
+              <p className="mt-5 text-slate-400 leading-relaxed">
+                I care deeply about the seams where models meet products — clean
+                contracts, thoughtful UX, tight feedback loops. Whether I’m building a
+                permission-safe RAG platform or a multi-agent research system, the goal is the
+                same: make the intelligent part feel obvious, reliable and fast.
+              </p>
+
+              <div className="mt-8 grid sm:grid-cols-2 gap-3">
+                {aboutHighlights.map((h) => (
+                  <div
+                    key={h.label}
+                    className="rounded-xl border border-white/5 bg-white/[0.02] p-4"
+                  >
+                    <div className="mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
+                      {h.label}
                     </div>
-                  </li>
+                    <div className="mt-1 text-slate-100 font-medium">{h.value}</div>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
 
-            <div className="glass rounded-2xl p-6">
-              <div className="mono text-[10px] uppercase tracking-[0.2em] text-violet-300">
-                now
+            <div className="grid sm:grid-cols-2 gap-3">
+              <div className="glass rounded-2xl p-6">
+                <div className="mono text-[10px] uppercase tracking-[0.2em] text-cyan-300">
+                  certifications
+                </div>
+                <ul className="mt-4 space-y-3">
+                  {certifications.map((c, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gradient-to-r from-cyan-300 to-violet-400 shrink-0" />
+                      <div>
+                        <div className="text-slate-100 text-sm">{c.name}</div>
+                        <div className="mono text-[11px] text-slate-500">{c.issuer}</div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <div className="mt-3 text-slate-200">
-                Building <span className="text-cyan-300">RAGVault</span> — a permission-safe
-                AI platform — and exploring multi-agent research systems.
-              </div>
-              <div className="mt-4 mono text-[11px] text-slate-500">
-                Based in {personalInfo.location}
+
+              <div className="glass rounded-2xl p-6">
+                <div className="mono text-[10px] uppercase tracking-[0.2em] text-violet-300">
+                  now
+                </div>
+                <div className="mt-3 text-slate-200 text-sm leading-relaxed">
+                  Building <span className="text-cyan-300">RAGVault</span> — a permission-safe
+                  AI platform — and exploring multi-agent research systems.
+                </div>
+                <div className="mt-4 mono text-[11px] text-slate-500">
+                  Based in {personalInfo.location}
+                </div>
               </div>
             </div>
           </motion.div>
