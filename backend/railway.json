@@ -1,0 +1,17 @@
+{
+  "name": "my-portfolio-backend",
+  "description": "FastAPI Portfolio Backend",
+  "region": "us-west",
+  "buildCommand": "pip install -r requirements.txt",
+  "startCommand": "uvicorn server:app --host 0.0.0.0 --port $PORT",
+  "env": {
+    "MONGO_URL": {
+      "description": "MongoDB connection string",
+      "required": true
+    },
+    "DB_NAME": {
+      "description": "MongoDB database name",
+      "value": "portfolio"
+    }
+  }
+}

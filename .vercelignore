@@ -1,0 +1,11 @@
+backend
+tests
+test_reports
+memory
+test_result.md
+.env
+.env.local
+.git
+.gitignore
+node_modules
+.next

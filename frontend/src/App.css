@@ -1,0 +1,107 @@
+/* App-level styles. Global tokens live in index.css */
+
+.App {
+  min-height: 100vh;
+}
+
+/* Subtle grid background */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.9) 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.9) 30%, transparent 75%);
+}
+
+.vignette {
+  background: radial-gradient(1200px 600px at 20% 0%, rgba(34, 211, 238, 0.10), transparent 60%),
+    radial-gradient(900px 500px at 100% 20%, rgba(139, 92, 246, 0.10), transparent 60%),
+    radial-gradient(900px 600px at 50% 100%, rgba(56, 189, 248, 0.08), transparent 60%);
+}
+
+.glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.glass-strong {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.glow-ring {
+  box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.25),
+    0 10px 40px -10px rgba(34, 211, 238, 0.25),
+    0 0 60px -20px rgba(139, 92, 246, 0.35);
+}
+
+.neon-text {
+  text-shadow: 0 0 18px rgba(34, 211, 238, 0.35);
+}
+
+.section-heading-gradient {
+  background: linear-gradient(90deg, #e2e8f0 0%, #67e8f9 50%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.mono {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.hscroll::-webkit-scrollbar {
+  display: none;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  color: #a5f3fc;
+  background: rgba(34, 211, 238, 0.08);
+  border: 1px solid rgba(34, 211, 238, 0.28);
+}
+
+.shine-border {
+  position: relative;
+}
+.shine-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.6), rgba(139, 92, 246, 0.5), transparent 70%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Cursor-reactive subtle tilt used by project cards */
+.tilt {
+  transform-style: preserve-3d;
+  transition: transform 220ms ease;
+}
+
+/* Custom text selection */
+::selection {
+  background: rgba(34, 211, 238, 0.3);
+  color: #e2fdff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
