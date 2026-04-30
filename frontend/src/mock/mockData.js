@@ -289,27 +289,6 @@ export const certifications = [
     accent: "#67e8f9",
     verifyCode: "UC-f670b8a9-d787-447e-9c20-e4ea953ad44a",
   },
-  {
-    id: "cert-ai-eng",
-    name: "AI Engineer Certification",
-    issuer: "Professional",
-    date: "2024",
-    skills: ["AI Engineering", "ML Systems"],
-    image: null,
-    accent: "#c4b5fd",
-    verifyCode: null,
-  },
-  {
-    id: "cert-py-workshop",
-    name: "Python · 3hr Workshop Certificate",
-    issuer: "Workshop",
-    date: "2024",
-    hours: "3",
-    skills: ["Python"],
-    image: null,
-    accent: "#818cf8",
-    verifyCode: null,
-  },
 ];
 
 export const socials = [
