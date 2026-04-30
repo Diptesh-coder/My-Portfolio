@@ -5,10 +5,7 @@
       "root": "frontend",
       "buildCommand": "npm run build",
       "installCommand": "npm install",
-      "framework": "react",
-      "env": {
-        "REACT_APP_API_URL": "@react_app_api_url"
-      }
+      "framework": "react"
     }
   }
 }
