@@ -8,10 +8,8 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10 py-12">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <div className="font-display text-lg font-semibold text-slate-100">
-              {personalInfo.firstName}
-              <span className="text-cyan-300">.</span>
-              {personalInfo.lastName.toLowerCase()}
+            <div className="font-display text-lg font-semibold text-cyan-300">
+              {personalInfo.firstName} {personalInfo.lastName}
             </div>
             <div className="mt-2 mono text-[11px] uppercase tracking-[0.22em] text-slate-500">
               ai / ml · fullstack
