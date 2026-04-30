@@ -44,8 +44,8 @@ export default function Navbar() {
             <Sparkles className="h-4 w-4 text-cyan-300" />
           </span>
           <div className="leading-tight">
-            <div className="font-display text-[15px] font-semibold tracking-tight">
-              {personalInfo.firstName} <span className="text-cyan-300">{personalInfo.lastName}</span>
+            <div className="font-display text-[15px] font-semibold tracking-tight text-cyan-300">
+              {personalInfo.firstName} {personalInfo.lastName}
             </div>
             <div className="mono text-[10px] uppercase tracking-[0.18em] text-slate-400">
               ai / ml · fullstack
