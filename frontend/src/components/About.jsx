@@ -149,11 +149,19 @@ export default function About() {
 
             <div className="grid sm:grid-cols-2 gap-3">
               <div className="glass rounded-2xl p-6">
-                <div className="mono text-[10px] uppercase tracking-[0.2em] text-cyan-300">
-                  certifications
+                <div className="flex items-center justify-between">
+                  <div className="mono text-[10px] uppercase tracking-[0.2em] text-cyan-300">
+                    certifications
+                  </div>
+                  <a
+                    href="#certificates"
+                    className="mono text-[10px] uppercase tracking-[0.18em] text-slate-400 hover:text-cyan-300 transition-colors"
+                  >
+                    view all →
+                  </a>
                 </div>
                 <ul className="mt-4 space-y-3">
-                  {certifications.map((c) => (
+                  {certifications.slice(0, 3).map((c) => (
                     <li key={c.id} className="flex items-start gap-3">
                       <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gradient-to-r from-cyan-300 to-violet-400 shrink-0" />
                       <div>
