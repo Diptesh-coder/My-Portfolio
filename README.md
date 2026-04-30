@@ -44,6 +44,7 @@ Vercel
 
 ## 📂 Project Structure
 
+```bash
 My-Portfolio/
 ├── public/
 ├── src/
@@ -55,6 +56,7 @@ My-Portfolio/
 ├── package.json
 ├── tailwind.config.js
 └── vite.config.js
+```
 
 ## 🚀 Getting Started
 1. Clone the repository:
