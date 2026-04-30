@@ -68,7 +68,7 @@ export default function Hero() {
             variants={item}
             className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.02] tracking-tight"
           >
-            <span className="block text-slate-100">Hi, I’m {personalInfo.firstName}.</span>
+            <span className="block text-slate-100">Hi, I’m {personalInfo.name}.</span>
             <span className="block mt-2 section-heading-gradient neon-text">
               I build intelligent systems.
             </span>
