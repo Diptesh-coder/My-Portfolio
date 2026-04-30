@@ -45,16 +45,16 @@ Vercel
 ## 📂 Project Structure
 
 My-Portfolio/
-│── public/
-│── src/
+├── public/
+├── src/
 │   ├── components/
 │   ├── sections/
 │   ├── assets/
 │   ├── App.jsx
 │   └── main.jsx
-│── package.json
-│── tailwind.config.js
-│── vite.config.js
+├── package.json
+├── tailwind.config.js
+└── vite.config.js
 
 ## 🚀 Getting Started
 1. Clone the repository:
